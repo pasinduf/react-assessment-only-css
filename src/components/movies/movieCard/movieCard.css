@@ -1,0 +1,77 @@
+ .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    padding: 0px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+.col {
+    float: left;
+    height: auto;
+  }
+  
+  .image {
+    width: 20%;
+    max-height: 300px;
+  }
+  
+
+  .poster{
+    width: 170%;
+    height: 320px;
+    margin-left: 2%;
+}
+
+  .details {
+    width: 80%;
+    text-align: left;
+    min-height: 320px;
+    height: auto;
+  }
+  
+  .title{
+    margin-top: 5px;
+    padding: 0 0 0 20%;
+    font-size: medium;
+  }
+
+  .border{
+    margin-left: 17%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: 5px;
+  }
+
+  .bottom-details{
+    margin: 2% 0 0 22%;
+  }
+
+  .year{
+    opacity: 0.5;
+    padding-bottom: 15px;
+  }
+
+  .action{
+    float: right;
+    margin-right: 5%;
+  }
+
+  .expand-button{
+    background-color: #007bff;
+    color:#ffffff;
+    padding: 8px 15px;
+    margin-left: 5px;
+    font-weight: bold;
+    border: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

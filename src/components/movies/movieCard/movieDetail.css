@@ -1,0 +1,11 @@
+.more-details{
+    min-height: 210px;
+    height: auto;
+    margin: 0 5% 5% 20%;
+}
+
+.caption{
+    font-size: 0.7em;
+    opacity: 0.8;
+    margin-top: 4%;
+}

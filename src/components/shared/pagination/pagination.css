@@ -1,0 +1,17 @@
+.page-records{
+  margin-left: 5px;
+}
+
+.navigation{
+  margin-left: 10px;
+}
+
+.navigation-prev{
+  margin-right: 10px;
+  cursor: 'pointer'
+}
+
+.navigation-next{
+  margin-left: 10px;
+  cursor: 'pointer'
+}
