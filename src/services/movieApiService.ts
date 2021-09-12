@@ -1,7 +1,7 @@
-import { Config } from './config';
+import { baseConfig } from './config';
 import { getRequest } from './baseApiService';
 
-const baseUrl = Config.apiUrl;
+const baseUrl = baseConfig(process.env.NODE_ENV).apiUrl;
 
 export const searchMovies = (searchTerm: string, page: number) => {
     return getRequest(`${baseUrl}`, { s: searchTerm, page: page });

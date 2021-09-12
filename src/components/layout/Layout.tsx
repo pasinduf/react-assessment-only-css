@@ -31,12 +31,12 @@ const Layout = () => {
 
     const onSearch = () => {
         if (searchTerm.length > 0) fetchMovies();
+        if (currentPage > 1) setCurrentPage(1);
     }
 
     const fetchMovies = () => {
         setIsLoading(true);
         setMovies([])
-        setCurrentPage(1);
         setShowLandingBanner(false)
         searchMovies(searchTerm, currentPage).then(res => {
             if (res.Response === 'True') {
