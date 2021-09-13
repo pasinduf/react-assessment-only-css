@@ -3,7 +3,7 @@ import Header from 'components/shared/header/Header'
 import Movies from 'components/movies/Movies';
 import './layout.css';
 import { searchMovies } from 'services/movieApiService';
-
+import Pagination from 'components/shared/pagination/Pagination'
 
 const Layout = () => {
 
@@ -14,6 +14,7 @@ const Layout = () => {
     const [totalCount, setTotalCount] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
     const [error, setError] = useState('');
+    const moviesPageSize = 10
 
 
     useEffect(() => {
@@ -77,13 +78,24 @@ const Layout = () => {
             }
 
             {movies.length > 0 &&
-                <Movies
-                    movies={movies}
-                    totalCount={totalCount}
-                    currentPage={currentPage}
-                    onPageChange={(page: number) => setCurrentPage(page)}
-                    showMovieDetails={showMovieDetails}
-                />}
+                <>
+                    <div className="pagination">
+                        <Pagination
+                            title="Movies"
+                            totalCount={totalCount}
+                            currentPage={currentPage}
+                            totalPages={((Math.floor(totalCount / moviesPageSize)) + (totalCount % moviesPageSize > 0 ? 1 : 0))}
+                            pageSize={moviesPageSize}
+                            onPageChange={(page: number) => setCurrentPage(page)}
+                        />
+                    </div>
+
+                    <Movies
+                        movies={movies}
+                        showMovieDetails={showMovieDetails}
+                    />
+                </>
+            }
         </div>
     )
 }
