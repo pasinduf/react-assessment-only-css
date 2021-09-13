@@ -29,9 +29,9 @@ const Pagination = (props: IProps) => {
 
                 <div className="navigation">
                     <div>
-                        <i className="navigation-prev fa fa-backward" onClick={() => { if (props.currentPage > 1) props.onPageChange(props.currentPage - 1) }} />
+                        <i className="fa fa-backward navigation-prev" onClick={() => { if (props.currentPage > 1) props.onPageChange(props.currentPage - 1) }} />
                         <label >{props.currentPage}</label> / <label>{props.totalPages}</label>
-                        <i className="navigation-next fa fa-forward" style={{ marginLeft: '10px', cursor: 'pointer' }} onClick={() => { if (props.currentPage < props.totalPages) props.onPageChange(props.currentPage + 1) }} />
+                        <i className="fa fa-forward navigation-next" onClick={() => { if (props.currentPage < props.totalPages) props.onPageChange(props.currentPage + 1) }} />
                     </div>
                 </div>
             </div>
