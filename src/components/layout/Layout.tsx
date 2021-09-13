@@ -81,7 +81,7 @@ const Layout = () => {
                 <>
                     <div className="pagination">
                         <Pagination
-                            title="Movies"
+                            title="movies"
                             totalCount={totalCount}
                             currentPage={currentPage}
                             totalPages={((Math.floor(totalCount / moviesPageSize)) + (totalCount % moviesPageSize > 0 ? 1 : 0))}
